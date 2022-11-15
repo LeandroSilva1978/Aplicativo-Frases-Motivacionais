@@ -39,6 +39,7 @@
     </LinearLayout>
     
     <TextView
+        android:id="@+id/text_user_name"
         android:text="Olá, Kotlin!"
         android:fontFamily="@font/cabin"
         android:textColor="@color/black"
