@@ -1,12 +1,13 @@
-package com.example.frasesmotivacionais
+package com.example.frasesmotivacionais.ui
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.frasesmotivacionais.infra.FrasesmotivacionaisConstants
+import com.example.frasesmotivacionais.R
+import com.example.frasesmotivacionais.infra.SecurityPreferences
 import com.example.frasesmotivacionais.databinding.ActivityUserBinding
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,6 +23,8 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         binding.buttonSave.setOnClickListener(this)
 
         supportActionBar?.hide()
+
+        verifyUserName()
     }
 
     override fun onClick(v: View) {
@@ -30,12 +33,20 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    private fun verifyUserName() {
+        val name = SecurityPreferences(this).getString(FrasesmotivacionaisConstants.KEY.USER_NAME)
+        if (name != "") {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
+
     private fun handleSave() {
 
         val name = binding.editName.text.toString()
         if (name != "") {
 
-            SecurityPreferences(this).storeString("USER_NAME", name)
+            SecurityPreferences(this).storeString(FrasesmotivacionaisConstants.KEY.USER_NAME, name)
 
             startActivity(Intent(this, MainActivity::class.java))
             finish()

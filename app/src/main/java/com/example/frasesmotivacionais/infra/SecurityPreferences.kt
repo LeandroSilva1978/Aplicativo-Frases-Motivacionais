@@ -1,4 +1,4 @@
-package com.example.frasesmotivacionais
+package com.example.frasesmotivacionais.infra
 
 import android.content.Context
 import android.content.SharedPreferences
