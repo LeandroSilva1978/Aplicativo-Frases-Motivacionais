@@ -24,12 +24,8 @@ class Mock {
         Phrase("Enquanto não estivermos comprometidos, haverá hesitação!", sunny),
         Phrase("Se você não sabe onde quer ir, qualquer caminho serve.", sunny),
         Phrase("Se você acredita, faz toda a diferença.", sunny),
-        Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny),
-        Phrase("Quem tem fome tem pressa!", sunny),
-        Phrase("Nina e Cléo, são meus amores!", sunny),
-        Phrase("Claudia é uma mulher formosa.", sunny),
-        Phrase("Quem quer rir, tem que fazer rir!", sunny),
-        Phrase("Cada cachorro que lamba sua caceta!", sunny)
+        Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny)
+
     )
 
     fun getPhrase(value: Int): String {
