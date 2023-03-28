@@ -24,7 +24,11 @@ class Mock {
         Phrase("Enquanto não estivermos comprometidos, haverá hesitação!", sunny),
         Phrase("Se você não sabe onde quer ir, qualquer caminho serve.", sunny),
         Phrase("Se você acredita, faz toda a diferença.", sunny),
-        Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny)
+        Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny),
+        Phrase("A felicidade não é algo pronto. Ela é feita das suas próprias ações." , sunny),
+        Phrase("Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez." , happy),
+        Phrase("Cada segundo é tempo para mudar tudo para sempre! " , happy),
+        Phrase("A paz vem de dentro de você. Não a procure à sua volta." , sunny)
 
     )
 
